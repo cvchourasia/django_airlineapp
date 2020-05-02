@@ -9,13 +9,13 @@ import logging
 logger = logging.getLogger(__name__)
 
 def index(request):
-    logger.error(request)
+    # logger.error(request)
     # if not request.user.is_authenticated:
     #     return render(request,"hello/login.html", {"message": None})
     context = {
       "flights": Flight.objects.all()
     }
-    logger.error(context)
+    # logger.error(context)
     return render(request,"hello/index.html", context)
 
 def login_view(request):
